@@ -1,17 +1,19 @@
+mod cka;
+mod ckd;
+
 use std::{collections::HashMap, io, path::Path};
 
-use plotters::{
-    chart::ChartBuilder,
-    prelude::{BitMapBackend, Circle, IntoDrawingArea, Text},
-    style::{
-        full_palette::{
-            BLACK, BLUE, BLUE_200, GREEN, GREEN_700, ORANGE, PURPLE, RED, RED_500, RED_700,
-            RED_900, WHITE, YELLOW_500, YELLOW_600,
-        },
-        Color, IntoFont, RGBColor, TextStyle,
+use plotters::style::{
+    full_palette::{
+        BLUE, BLUE_200, GREEN, GREEN_700, ORANGE, PURPLE, RED, RED_500, RED_700, RED_900,
+        YELLOW_500, YELLOW_600,
     },
+    RGBColor,
 };
 use serde::Deserialize;
+
+pub use cka::plot_cka;
+pub use ckd::plot_ckd;
 
 pub type Result<T> = std::result::Result<T, MyError>;
 
@@ -219,12 +221,11 @@ pub struct DataSource {
     xg: f64,
 }
 
-#[derive(Debug, Clone)]
 pub struct Data {
     team: Teams,
     game: String,
     game_week: u32,
-    opponent: String,
+    opponent: Teams,
     total_ck_for: u32,
     total_ck_against: u32,
     shots_from_ck: u32,
@@ -296,14 +297,11 @@ pub fn parse_csv<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Vec<Data>>> {
                 let teams = ds.game.split("vs").map(|s| s.trim()).collect::<Vec<_>>();
                 let opponent = teams
                     .iter()
-                    .filter(|s| Teams::from(**s) != ds.team)
-                    .map(|s| s.to_string())
-                    .collect::<String>();
-
-                let opp_data = data_sources
-                    .iter()
-                    .find(|d| d.team == Teams::from(&opponent))
+                    .find(|s| Teams::from(**s) != ds.team)
+                    .map(|s| Teams::from(*s))
                     .unwrap();
+
+                let opp_data = data_sources.iter().find(|d| d.team == opponent).unwrap();
 
                 let total_ck_against = opp_data.total_ck_for;
                 let shots_against_from_ck = opp_data.shots_from_ck;
@@ -380,7 +378,7 @@ pub fn accumulate(input: HashMap<u32, Vec<Data>>) -> Vec<TeamData> {
         accumulated_data.push(team_data);
     }
 
-    dbg!(accumulated_data)
+    accumulated_data
 }
 
 #[derive(Debug, Clone)]
@@ -422,95 +420,4 @@ pub fn create_dataframe(data: Vec<TeamData>) -> DataFrame {
         xg,
         xg_against,
     }
-}
-
-const OUTPUT: &str = "chart_output/chart.png";
-
-pub fn draw_plotters(df: &DataFrame) -> Result<()> {
-    let xg_conceded_per_shot = df
-        .xg_against
-        .iter()
-        .cloned()
-        .zip(df.shots_against_from_ck.clone())
-        .map(|(xg, shots)| xg / shots as f64)
-        .collect::<Vec<_>>();
-
-    let shot_ratio = df
-        .shots_against_from_ck
-        .iter()
-        .cloned()
-        .zip(df.total_ck_against.clone())
-        .map(|(shot, tck)| shot as f64 / tck as f64)
-        .collect::<Vec<_>>();
-
-    let xy_data = xg_conceded_per_shot
-        .iter()
-        .cloned()
-        .zip(shot_ratio.clone())
-        .collect::<Vec<_>>();
-
-    let plot_data = df
-        .team_name
-        .iter()
-        .cloned()
-        .zip(xy_data)
-        .collect::<Vec<_>>();
-
-    let x_max = xg_conceded_per_shot
-        .iter()
-        .map(|n| (n * 1000.) as u32)
-        .max()
-        .unwrap() as f64
-        / 1000.;
-    let x_max_margin = x_max + (x_max * 10. / 100.);
-
-    let x_min = xg_conceded_per_shot
-        .iter()
-        .map(|n| (n * 1000.) as u32)
-        .min()
-        .unwrap() as f64
-        / 1000.;
-    let x_min_margin = x_min - (x_min * 10. / 100.);
-
-    let y_max = shot_ratio.iter().map(|n| (n * 1000.) as u32).max().unwrap() as f64 / 1000.;
-    let y_max_margin = y_max + (y_max * 10. / 100.);
-
-    let y_min = shot_ratio.iter().map(|n| (n * 1000.) as u32).min().unwrap() as f64 / 1000.;
-    let y_min_margin = y_min - (y_min * 10. / 100.);
-
-    let root = BitMapBackend::new(OUTPUT, (1024, 768)).into_drawing_area();
-    root.fill(&WHITE)?;
-
-    let mut scatter_ctx = ChartBuilder::on(&root)
-        .margin(10)
-        .x_label_area_size(50)
-        .y_label_area_size(55)
-        .caption("Defensive Corner Proficiency", ("sans-serif", 35))
-        .build_cartesian_2d(x_min_margin..x_max_margin, y_min_margin..y_max_margin)?;
-
-    scatter_ctx
-        .configure_mesh()
-        .disable_x_mesh()
-        .disable_y_mesh()
-        .x_desc("xG per Shot Conceded from Corner Kick")
-        .y_desc("Shots Conceded per Corner Kicks Faced")
-        .axis_desc_style(("sans-serif", 20))
-        .draw()?;
-
-    scatter_ctx.draw_series(plot_data.clone().iter().map(|(name, (x, y))| {
-        let color: RGBColor = name.into();
-        Circle::new((*x, *y), 5, color.filled())
-    }))?;
-
-    scatter_ctx.draw_series(plot_data.iter().cloned().map(|(name, (x, y))| {
-        Text::new(
-            name.to_string(),
-            (x + (x * 1. / 100.), y + (y * 1. / 100.)),
-            TextStyle::from(("sans-serif", 20).into_font()).color(&BLACK),
-        )
-    }))?;
-
-    root.present()?;
-
-    Ok(())
 }
