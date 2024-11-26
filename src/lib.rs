@@ -1,7 +1,4 @@
-mod cka;
-mod ckd;
-
-use std::{collections::HashMap, io, path::Path};
+use std::io;
 
 use plotters::style::{
     full_palette::{
@@ -11,9 +8,6 @@ use plotters::style::{
     RGBColor,
 };
 use serde::Deserialize;
-
-pub use cka::plot_cka;
-pub use ckd::plot_ckd;
 
 pub type Result<T> = std::result::Result<T, MyError>;
 
@@ -211,29 +205,6 @@ impl From<&str> for Teams {
     }
 }
 
-#[derive(Debug, Clone, Deserialize)]
-pub struct DataSource {
-    team: Teams,
-    game: String,
-    game_week: u32,
-    total_ck_for: u32,
-    shots_from_ck: u32,
-    xg: f64,
-}
-
-pub struct Data {
-    team: Teams,
-    game: String,
-    game_week: u32,
-    opponent: Teams,
-    total_ck_for: u32,
-    total_ck_against: u32,
-    shots_from_ck: u32,
-    shots_against_from_ck: u32,
-    xg: f64,
-    xg_against: f64,
-}
-
 #[derive(Debug)]
 pub enum MyError {
     Io(String),
@@ -274,150 +245,5 @@ impl<E: std::error::Error + Send + Sync> From<plotters::drawing::DrawingAreaErro
     fn from(value: plotters::drawing::DrawingAreaErrorKind<E>) -> Self {
         let err = value.to_string();
         Self::Plotters(err)
-    }
-}
-
-pub fn parse_csv<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Vec<Data>>> {
-    let file = std::fs::File::open(path)?;
-    let mut csv_reader = csv::Reader::from_reader(file);
-
-    let mut records: HashMap<u32, Vec<Data>> = HashMap::new();
-    let mut data_sources: Vec<DataSource> = Vec::new();
-
-    for ds in csv_reader.deserialize() {
-        let data_source: DataSource = ds?;
-        data_sources.push(data_source)
-    }
-
-    for i in 0..10 {
-        let data_i = data_sources
-            .iter()
-            .filter(|ds| ds.game_week == i + 1)
-            .map(|ds| {
-                let teams = ds.game.split("vs").map(|s| s.trim()).collect::<Vec<_>>();
-                let opponent = teams
-                    .iter()
-                    .find(|s| Teams::from(**s) != ds.team)
-                    .map(|s| Teams::from(*s))
-                    .unwrap();
-
-                let opp_data = data_sources.iter().find(|d| d.team == opponent).unwrap();
-
-                let total_ck_against = opp_data.total_ck_for;
-                let shots_against_from_ck = opp_data.shots_from_ck;
-                let xg_against = opp_data.xg;
-
-                Data {
-                    team: ds.team,
-                    game: ds.game.clone(),
-                    game_week: ds.game_week,
-                    opponent,
-                    total_ck_for: ds.total_ck_for,
-                    total_ck_against,
-                    shots_from_ck: ds.shots_from_ck,
-                    shots_against_from_ck,
-                    xg: ds.xg,
-                    xg_against,
-                }
-            })
-            .collect::<Vec<_>>();
-
-        records.insert(i, data_i);
-    }
-
-    Ok(records)
-}
-
-#[derive(Debug, Clone)]
-pub struct TeamData {
-    team_name: Teams,
-    total_ck_for: u32,
-    total_ck_against: u32,
-    shots_from_ck: u32,
-    shots_against_from_ck: u32,
-    xg: f64,
-    xg_against: f64,
-}
-
-pub fn accumulate(input: HashMap<u32, Vec<Data>>) -> Vec<TeamData> {
-    let mut team_names: Vec<Teams> = Vec::new();
-    if let Some(vd) = input.get(&0) {
-        vd.iter().for_each(|d| team_names.push(d.team))
-    }
-
-    let mut accumulated_data: Vec<TeamData> = Vec::new();
-
-    for team_name in team_names {
-        let team_data_iter = input
-            .values()
-            .map(|vd| vd.iter().find(|d| d.team == team_name).unwrap())
-            .collect::<Vec<_>>();
-        let total_ck_for = team_data_iter.iter().map(|d| d.total_ck_for).sum::<u32>();
-        let total_ck_against = team_data_iter
-            .iter()
-            .map(|d| d.total_ck_against)
-            .sum::<u32>();
-        let shots_from_ck = team_data_iter.iter().map(|d| d.shots_from_ck).sum::<u32>();
-        let shots_against_from_ck = team_data_iter
-            .iter()
-            .map(|d| d.shots_against_from_ck)
-            .sum::<u32>();
-        let xg = team_data_iter.iter().map(|d| d.xg).sum::<f64>();
-        let xg_against = team_data_iter.iter().map(|d| d.xg_against).sum::<f64>();
-
-        let team_data = TeamData {
-            team_name,
-            total_ck_for,
-            total_ck_against,
-            shots_from_ck,
-            shots_against_from_ck,
-            xg,
-            xg_against,
-        };
-
-        accumulated_data.push(team_data);
-    }
-
-    accumulated_data
-}
-
-#[derive(Debug, Clone)]
-pub struct DataFrame {
-    team_name: Vec<Teams>,
-    total_ck_for: Vec<u32>,
-    total_ck_against: Vec<u32>,
-    shots_from_ck: Vec<u32>,
-    shots_against_from_ck: Vec<u32>,
-    xg: Vec<f64>,
-    xg_against: Vec<f64>,
-}
-
-pub fn create_dataframe(data: Vec<TeamData>) -> DataFrame {
-    let mut team_name = vec![];
-    let mut total_ck_for = vec![];
-    let mut total_ck_against = vec![];
-    let mut shots_from_ck = vec![];
-    let mut shots_against_from_ck = vec![];
-    let mut xg = vec![];
-    let mut xg_against = vec![];
-
-    data.iter().for_each(|d| {
-        team_name.push(d.team_name);
-        total_ck_for.push(d.total_ck_for);
-        total_ck_against.push(d.total_ck_against);
-        shots_from_ck.push(d.shots_from_ck);
-        shots_against_from_ck.push(d.shots_against_from_ck);
-        xg.push(d.xg);
-        xg_against.push(d.xg_against);
-    });
-
-    DataFrame {
-        team_name,
-        total_ck_for,
-        total_ck_against,
-        shots_from_ck,
-        shots_against_from_ck,
-        xg,
-        xg_against,
     }
 }
