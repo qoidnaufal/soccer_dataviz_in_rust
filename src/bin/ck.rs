@@ -21,9 +21,9 @@ pub struct DataSource {
     xg: f64,
 }
 
-pub struct Data {
+#[derive(Debug)]
+pub struct CornerKickData {
     team: Teams,
-    _game: String,
     _game_week: u32,
     _opponent: Teams,
     total_ck_for: u32,
@@ -34,11 +34,11 @@ pub struct Data {
     xg_against: f64,
 }
 
-pub fn parse_csv<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Vec<Data>>> {
+pub fn parse_csv<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Vec<CornerKickData>>> {
     let file = std::fs::File::open(path)?;
     let mut csv_reader = csv::Reader::from_reader(file);
 
-    let mut records: HashMap<u32, Vec<Data>> = HashMap::new();
+    let mut records: HashMap<u32, Vec<CornerKickData>> = HashMap::new();
     let mut data_sources: Vec<DataSource> = Vec::new();
 
     for ds in csv_reader.deserialize() {
@@ -58,15 +58,17 @@ pub fn parse_csv<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Vec<Data>>> {
                     .map(|s| Teams::from(*s))
                     .unwrap();
 
-                let opp_data = data_sources.iter().find(|d| d.team == opponent).unwrap();
+                let opp_data = data_sources
+                    .iter()
+                    .find(|d| d.team == opponent && d.game_week == i + 1)
+                    .unwrap();
 
                 let total_ck_against = opp_data.total_ck_for;
                 let shots_against_from_ck = opp_data.shots_from_ck;
                 let xg_against = opp_data.xg;
 
-                Data {
+                CornerKickData {
                     team: ds.team,
-                    _game: ds.game.clone(),
                     _game_week: ds.game_week,
                     _opponent: opponent,
                     total_ck_for: ds.total_ck_for,
@@ -79,6 +81,7 @@ pub fn parse_csv<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Vec<Data>>> {
             })
             .collect::<Vec<_>>();
 
+        println!("{:#?}", data_i);
         records.insert(i, data_i);
     }
 
@@ -86,7 +89,7 @@ pub fn parse_csv<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Vec<Data>>> {
 }
 
 #[derive(Debug, Clone)]
-pub struct TeamData {
+pub struct TeamCKData {
     team_name: Teams,
     total_ck_for: u32,
     total_ck_against: u32,
@@ -96,18 +99,23 @@ pub struct TeamData {
     xg_against: f64,
 }
 
-pub fn accumulate(input: HashMap<u32, Vec<Data>>) -> Vec<TeamData> {
+pub fn accumulate(input: HashMap<u32, Vec<CornerKickData>>) -> Vec<TeamCKData> {
     let mut team_names: Vec<Teams> = Vec::new();
     if let Some(vd) = input.get(&0) {
         vd.iter().for_each(|d| team_names.push(d.team))
     }
 
-    let mut accumulated_data: Vec<TeamData> = Vec::new();
+    let mut accumulated_data: Vec<TeamCKData> = Vec::new();
 
     for team_name in team_names {
         let team_data_iter = input
             .values()
-            .map(|vd| vd.iter().find(|d| d.team == team_name).unwrap())
+            .map(|vd| {
+                vd.iter()
+                    .filter(|d| d.team == team_name)
+                    .collect::<Vec<_>>()
+            })
+            .flatten()
             .collect::<Vec<_>>();
         let total_ck_for = team_data_iter.iter().map(|d| d.total_ck_for).sum::<u32>();
         let total_ck_against = team_data_iter
@@ -122,7 +130,7 @@ pub fn accumulate(input: HashMap<u32, Vec<Data>>) -> Vec<TeamData> {
         let xg = team_data_iter.iter().map(|d| d.xg).sum::<f64>();
         let xg_against = team_data_iter.iter().map(|d| d.xg_against).sum::<f64>();
 
-        let team_data = TeamData {
+        let team_data = TeamCKData {
             team_name,
             total_ck_for,
             total_ck_against,
@@ -149,7 +157,7 @@ pub struct DataFrame {
     pub xg_against: Vec<f64>,
 }
 
-pub fn create_dataframe(data: Vec<TeamData>) -> DataFrame {
+pub fn create_dataframe(data: Vec<TeamCKData>) -> DataFrame {
     let mut team_name = vec![];
     let mut total_ck_for = vec![];
     let mut total_ck_against = vec![];

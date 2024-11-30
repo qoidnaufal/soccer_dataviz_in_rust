@@ -11,7 +11,7 @@ use serde::Deserialize;
 
 pub type Result<T> = std::result::Result<T, MyError>;
 
-#[derive(Debug, Clone, Copy, Deserialize, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, Deserialize, PartialEq, Eq, Hash)]
 pub enum Teams {
     #[serde(rename = "AREMA FC")]
     AremaFC,
