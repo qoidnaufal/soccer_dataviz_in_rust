@@ -1,4 +1,5 @@
 use std::io;
+use std::fs;
 
 use plotters::style::{
     full_palette::{
@@ -49,6 +50,18 @@ pub enum Teams {
     PSBaritoPutera,
     #[serde(rename = "Semen Padang FC")]
     SemenPadangFC,
+}
+
+impl Teams {
+    pub fn logo(&self) -> Result<image::DynamicImage> {
+        let file_name = self.to_string();
+        let file_path = format!("../../Analysis/TSG Liga1 2024-25/_clubLogo/{file_name}.png");
+        let image_file = fs::File::open(file_path)?;
+        let reader = io::BufReader::new(image_file);
+        let image = image::load(reader, image::ImageFormat::Png)?;
+
+        Ok(image)
+    }
 }
 
 impl std::fmt::Display for Teams {
@@ -148,7 +161,7 @@ impl From<String> for Teams {
             "PERSIK Kediri" => Self::PersikKediri,
             "PS Barito Putera" => Self::PSBaritoPutera,
             "Semen Padang FC" => Self::SemenPadangFC,
-            _ => unreachable!("Invalid Team Name"),
+            other => unreachable!("Invalid Team Name {other}"),
         }
     }
 }
@@ -174,7 +187,7 @@ impl From<&String> for Teams {
             "PERSIK Kediri" => Self::PersikKediri,
             "PS Barito Putera" => Self::PSBaritoPutera,
             "Semen Padang FC" => Self::SemenPadangFC,
-            _ => unreachable!("Invalid Team Name"),
+            other => unreachable!("Invalid Team Name {other}"),
         }
     }
 }
@@ -200,7 +213,7 @@ impl From<&str> for Teams {
             "PERSIK Kediri" => Self::PersikKediri,
             "PS Barito Putera" => Self::PSBaritoPutera,
             "Semen Padang FC" => Self::SemenPadangFC,
-            _ => unreachable!("Invalid Team Name"),
+            other => unreachable!("Invalid Team Name {other}"),
         }
     }
 }
@@ -210,6 +223,7 @@ pub enum MyError {
     Io(String),
     Csv(String),
     Plotters(String),
+    Image(String),
 }
 
 impl std::fmt::Display for MyError {
@@ -218,6 +232,7 @@ impl std::fmt::Display for MyError {
             Self::Io(err) => err,
             Self::Csv(err) => err,
             Self::Plotters(err) => err,
+            Self::Image(err) => err,
         };
         write!(f, "{text}")
     }
@@ -236,6 +251,12 @@ impl From<csv::Error> for MyError {
     fn from(value: csv::Error) -> Self {
         let err = value.to_string();
         Self::Csv(err)
+    }
+}
+
+impl From<image::ImageError> for MyError {
+    fn from(value: image::ImageError) -> Self {
+        Self::Image(value.to_string())
     }
 }
 

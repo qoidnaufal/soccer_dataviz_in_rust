@@ -1,9 +1,10 @@
 use std::{collections::HashMap, path::Path};
 
+use image::GenericImageView;
 use plotters::{
     chart::ChartBuilder,
-    prelude::{BitMapBackend, Circle, IntoDrawingArea, Text},
-    style::{Color, IntoFont, RGBColor, TextStyle, BLACK, WHITE},
+    prelude::{BitMapBackend,IntoDrawingArea, Text},
+    style::{IntoFont, TextStyle, BLACK, WHITE},
 };
 use serde::Deserialize;
 use tsg2425::{Result, Teams};
@@ -46,12 +47,15 @@ pub fn parse_csv<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Vec<CornerKickD
         data_sources.push(data_source)
     }
 
-    for i in 0..10 {
+    let gw_count = data_sources.iter().filter(|ds| ds.team == Teams::AremaFC).count();
+    println!("{gw_count}");
+
+    for i in 0..gw_count {
         let data_i = data_sources
             .iter()
-            .filter(|ds| ds.game_week == i + 1)
+            .filter(|ds| ds.game_week == i as u32 + 1)
             .map(|ds| {
-                let teams = ds.game.split("vs").map(|s| s.trim()).collect::<Vec<_>>();
+                let teams = ds.game.split("-").map(|s| s.trim()).collect::<Vec<_>>();
                 let opponent = teams
                     .iter()
                     .find(|s| Teams::from(**s) != ds.team)
@@ -60,7 +64,7 @@ pub fn parse_csv<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Vec<CornerKickD
 
                 let opp_data = data_sources
                     .iter()
-                    .find(|d| d.team == opponent && d.game_week == i + 1)
+                    .find(|d| d.team == opponent && d.game_week == i as u32 + 1)
                     .unwrap();
 
                 let total_ck_against = opp_data.total_ck_for;
@@ -81,8 +85,8 @@ pub fn parse_csv<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Vec<CornerKickD
             })
             .collect::<Vec<_>>();
 
-        println!("{:#?}", data_i);
-        records.insert(i, data_i);
+        // println!("{:#?}", data_i);
+        records.insert(i as _, data_i);
     }
 
     Ok(records)
@@ -259,15 +263,20 @@ pub fn plot_cka(df: &DataFrame) -> Result<()> {
         .draw()?;
 
     scatter_ctx.draw_series(plot_data.iter().map(|(name, (x, y))| {
-        let color: RGBColor = (**name).into();
-        Circle::new((**x, **y), 5, color.filled())
+        let club_logo = name.logo().unwrap().resize_exact(15, 15, image::imageops::FilterType::Triangle);
+        let elem: plotters::prelude::BitMapElement<_> = plotters::prelude::BitMapElement::with_owned_buffer(
+            (**x, **y),
+            club_logo.dimensions(),
+            club_logo.into_rgb8().to_vec()
+        ).unwrap();
+        elem
     }))?;
 
     scatter_ctx.draw_series(plot_data.iter().map(|(name, (x, y))| {
         Text::new(
             name.to_string(),
-            (**x + (**x * 1. / 100.), **y + (**y * 1. / 100.)),
-            TextStyle::from(("sans-serif", 20).into_font()).color(&BLACK),
+            (**x + 0.003, **y),
+            TextStyle::from(("sans-serif", 15).into_font()).color(&BLACK),
         )
     }))?;
 
@@ -324,7 +333,7 @@ pub fn plot_ckd(df: &DataFrame) -> Result<()> {
     root.fill(&WHITE)?;
 
     let mut scatter_ctx = ChartBuilder::on(&root)
-        .margin(10)
+        .margin(30)
         .x_label_area_size(50)
         .y_label_area_size(55)
         .caption("Defensive Corner Proficiency", ("sans-serif", 35))
@@ -340,15 +349,27 @@ pub fn plot_ckd(df: &DataFrame) -> Result<()> {
         .draw()?;
 
     scatter_ctx.draw_series(plot_data.iter().map(|(name, (x, y))| {
-        let color: RGBColor = (**name).into();
-        Circle::new((**x, **y), 5, color.filled())
+        let club_logo = name.logo().unwrap().resize_exact(15, 15, image::imageops::FilterType::Triangle);
+        let elem: plotters::prelude::BitMapElement<_> = plotters::prelude::BitMapElement::with_owned_buffer(
+            (**x, **y),
+            club_logo.dimensions(),
+            club_logo.into_rgb8().to_vec()
+        ).unwrap();
+        elem
     }))?;
 
     scatter_ctx.draw_series(plot_data.iter().map(|(name, (x, y))| {
+        let name = name.to_string();
         Text::new(
-            name.to_string(),
-            (**x + (**x * 1. / 100.), **y + (**y * 1. / 100.)),
-            TextStyle::from(("sans-serif", 20).into_font()).color(&BLACK),
+            name.clone(),
+            match name.as_str() {
+                "Bali United FC"
+                | "PERSIS Solo"
+                | "AREMA FC"
+                | "PSIS Semarang" => (**x + 0.003, **y - 0.004),
+                _ => (**x + 0.003, **y)
+            },
+            TextStyle::from(("sans-serif", 15).into_font()).color(&BLACK),
         )
     }))?;
 

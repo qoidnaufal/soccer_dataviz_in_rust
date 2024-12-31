@@ -5,5 +5,6 @@ edition = "2021"
 
 [dependencies]
 csv = "1.3.1"
-plotters = "0.3.7"
+image = { version = "0.25.5", features = ["png"] }
+plotters = { version = "0.3.7", features = ["bitmap_backend", "image"] }
 serde = { version = "1.0.214", features = ["derive"] }

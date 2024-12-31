@@ -1,181 +1,305 @@
-team,game,game_week,total_ck_for,shots_from_ck,xg
-AREMA FC,AREMA FC  vs  Dewa United FC,1,10,5,0.572087861
-AREMA FC,AREMA FC  vs  Borneo FC Samarinda,2,5,3,0.316733603
-AREMA FC,PERSIB Bandung  vs  AREMA FC,3,5,2,0.073851139
-AREMA FC,Bali United FC  vs  AREMA FC,4,3,0,0
-AREMA FC,PSM Makassar  vs  AREMA FC,5,0,0,0
-AREMA FC,PSS Sleman  vs  AREMA FC,6,9,3,0.182289392
-AREMA FC,PSIS Semarang  vs  AREMA FC,7,4,0,0
-AREMA FC,AREMA FC  vs  Malut United FC,8,5,0,0
-AREMA FC,AREMA FC  vs  PERSIJA Jakarta,9,4,0,0
-AREMA FC,PS Barito Putera  vs  AREMA FC,10,8,3,0.421233124
-Bali United FC,PERSIK Kediri  vs  Bali United FC,1,5,2,0.15747211
-Bali United FC,Bali United FC  vs  Semen Padang FC,2,6,0,0
-Bali United FC,Borneo FC Samarinda  vs  Bali United FC,3,4,2,0.059465317
-Bali United FC,Bali United FC  vs  AREMA FC,4,5,1,0.070998579
-Bali United FC,Bali United FC  vs  PSS Sleman,5,14,6,0.216437621
-Bali United FC,Malut United FC  vs  Bali United FC,6,3,1,0.084777284
-Bali United FC,Bali United FC  vs  PS Barito Putera,7,7,5,0.543601045
-Bali United FC,PERSITA Tangerang  vs  Bali United FC,8,6,1,0.00534472
-Bali United FC,Bali United FC  vs  PERSIS Solo,9,8,2,0.101321857
-Bali United FC,PSBS Biak  vs  Bali United FC,10,4,1,0.015068233
-Borneo FC Samarinda,Semen Padang FC  vs  Borneo FC Samarinda,1,6,0,0
-Borneo FC Samarinda,AREMA FC  vs  Borneo FC Samarinda,2,4,1,0.348053791
-Borneo FC Samarinda,Borneo FC Samarinda  vs  Bali United FC,3,5,2,0.25086227
-Borneo FC Samarinda,PSS Sleman  vs  Borneo FC Samarinda,4,4,0,0
-Borneo FC Samarinda,Borneo FC Samarinda  vs  Malut United FC,5,6,1,0.058469797
-Borneo FC Samarinda,PS Barito Putera  vs  Borneo FC Samarinda,6,2,0,0
-Borneo FC Samarinda,Borneo FC Samarinda  vs  PERSITA Tangerang,7,10,5,0.937642917
-Borneo FC Samarinda,PERSIS Solo  vs  Borneo FC Samarinda,8,8,4,0.520751255
-Borneo FC Samarinda,Borneo FC Samarinda  vs  PSBS Biak,9,4,0,0
-Borneo FC Samarinda,Borneo FC Samarinda  vs  Dewa United FC,10,5,2,0.107854847
-Dewa United FC,AREMA FC  vs  Dewa United FC,1,4,0,0
-Dewa United FC,Dewa United FC  vs  PERSIB Bandung,2,6,1,0.06203801
-Dewa United FC,PSM Makassar  vs  Dewa United FC,3,8,4,0.113660159
-Dewa United FC,Dewa United FC  vs  PSIS Semarang,4,5,1,0.00392115
-Dewa United FC,PERSIJA Jakarta  vs  Dewa United FC,5,5,1,0.010324889
-Dewa United FC,Dewa United FC  vs  Madura United FC,6,1,0,0
-Dewa United FC,PERSEBAYA Surabaya  vs  Dewa United FC,7,1,0,0
-Dewa United FC,Dewa United FC  vs  PERSIK Kediri,8,10,0,0
-Dewa United FC,Semen Padang FC  vs  Dewa United FC,9,4,0,0
-Dewa United FC,Borneo FC Samarinda  vs  Dewa United FC,10,3,0,0
-Madura United FC,Madura United FC  vs  Malut United FC,1,3,0,0
-Madura United FC,PS Barito Putera  vs  Madura United FC,2,2,0,0
-Madura United FC,Madura United FC  vs  PERSITA Tangerang,3,4,0,0
-Madura United FC,PERSIS Solo  vs  Madura United FC,4,3,0,0
-Madura United FC,PSBS Biak  vs  Madura United FC,5,4,3,0.613597794
-Madura United FC,Dewa United FC  vs  Madura United FC,6,3,2,0.143308057
-Madura United FC,Madura United FC  vs  PERSIB Bandung,7,8,0,0
-Madura United FC,PSM Makassar  vs  Madura United FC,8,6,4,0.196986822
-Madura United FC,Madura United FC  vs  PSIS Semarang,9,8,2,0.142187721
-Madura United FC,PERSIJA Jakarta  vs  Madura United FC,10,6,0,0
-Malut United FC,Madura United FC  vs  Malut United FC,1,5,1,0.053923224
-Malut United FC,Malut United FC  vs  PERSEBAYA Surabaya,2,6,2,0.081230818
-Malut United FC,PERSIK Kediri  vs  Malut United FC,3,2,0,0
-Malut United FC,Malut United FC  vs  Semen Padang FC,4,3,1,0.027347541
-Malut United FC,Borneo FC Samarinda  vs  Malut United FC,5,1,0,0
-Malut United FC,Malut United FC  vs  Bali United FC,6,5,3,0.187685642
-Malut United FC,PSS Sleman  vs  Malut United FC,7,5,0,0
-Malut United FC,AREMA FC  vs  Malut United FC,8,5,1,0.014027444
-Malut United FC,Malut United FC  vs  PS Barito Putera,9,5,2,0.17011797
-Malut United FC,PERSITA Tangerang  vs  Malut United FC,10,6,2,0.12977546
-PERSEBAYA Surabaya,PERSEBAYA Surabaya  vs  PSS Sleman,1,6,1,0.053923224
-PERSEBAYA Surabaya,Malut United FC  vs  PERSEBAYA Surabaya,2,8,2,0.145973629
-PERSEBAYA Surabaya,PERSEBAYA Surabaya  vs  PS Barito Putera,3,4,0,0
-PERSEBAYA Surabaya,PERSITA Tangerang  vs  PERSEBAYA Surabaya,4,3,0,0
-PERSEBAYA Surabaya,PERSEBAYA Surabaya  vs  PERSIS Solo,5,5,2,0.165844451
-PERSEBAYA Surabaya,PSBS Biak  vs  PERSEBAYA Surabaya,6,5,1,0.10198549
-PERSEBAYA Surabaya,PERSEBAYA Surabaya  vs  Dewa United FC,7,5,1,0.172491888
-PERSEBAYA Surabaya,PERSIB Bandung  vs  PERSEBAYA Surabaya,8,3,0,0
-PERSEBAYA Surabaya,PERSEBAYA Surabaya  vs  PSM Makassar,9,6,2,0.09070967
-PERSEBAYA Surabaya,PSIS Semarang  vs  PERSEBAYA Surabaya,10,5,0,0
-PERSIB Bandung,PERSIB Bandung  vs  PSBS Biak,1,4,1,0.069409951
-PERSIB Bandung,Dewa United FC  vs  PERSIB Bandung,2,3,1,0.035570718
-PERSIB Bandung,PERSIB Bandung  vs  AREMA FC,3,5,1,0.022207058
-PERSIB Bandung,PSM Makassar  vs  PERSIB Bandung,4,3,1,0.227547217
-PERSIB Bandung,PERSIB Bandung  vs  PSIS Semarang,5,4,2,0.293864787
-PERSIB Bandung,PERSIB Bandung  vs  PERSIJA Jakarta,6,1,0,0
-PERSIB Bandung,Madura United FC  vs  PERSIB Bandung,7,2,1,0.146452805
-PERSIB Bandung,PERSIB Bandung  vs  PERSEBAYA Surabaya,8,2,1,0.150217405
-PERSIB Bandung,PERSIK Kediri  vs  PERSIB Bandung,9,3,0,0
-PERSIB Bandung,PERSIB Bandung  vs  Semen Padang FC,10,10,6,0.753433607
-PERSIJA Jakarta,PERSIJA Jakarta  vs  PS Barito Putera,1,4,3,0.246263787
-PERSIJA Jakarta,PERSITA Tangerang  vs  PERSIJA Jakarta,2,8,0,0
-PERSIJA Jakarta,PERSIJA Jakarta  vs  PERSIS Solo,3,3,0,0
-PERSIJA Jakarta,PSBS Biak  vs  PERSIJA Jakarta,4,5,1,0.018694897
-PERSIJA Jakarta,PERSIJA Jakarta  vs  Dewa United FC,5,8,2,0.114269123
-PERSIJA Jakarta,PERSIB Bandung  vs  PERSIJA Jakarta,6,4,0,0
-PERSIJA Jakarta,PERSIJA Jakarta  vs  PSM Makassar,7,5,1,0.116790777
-PERSIJA Jakarta,PSIS Semarang  vs  PERSIJA Jakarta,8,8,2,0.092714888
-PERSIJA Jakarta,AREMA FC  vs  PERSIJA Jakarta,9,6,0,0
-PERSIJA Jakarta,PERSIJA Jakarta  vs  Madura United FC,10,4,3,0.254589238
-PERSIK Kediri,PERSIK Kediri  vs  Bali United FC,1,0,0,0
-PERSIK Kediri,PSS Sleman  vs  PERSIK Kediri,2,2,1,0.315677193
-PERSIK Kediri,PERSIK Kediri  vs  Malut United FC,3,4,4,0.529830773
-PERSIK Kediri,PS Barito Putera  vs  PERSIK Kediri,4,3,0,0
-PERSIK Kediri,PERSIK Kediri  vs  PERSITA Tangerang,5,1,1,0.295766249
-PERSIK Kediri,PERSIS Solo  vs  PERSIK Kediri,6,2,0,0
-PERSIK Kediri,PERSIK Kediri  vs  PSBS Biak,7,4,2,0.074796455
-PERSIK Kediri,Dewa United FC  vs  PERSIK Kediri,8,2,0,0
-PERSIK Kediri,PERSIK Kediri  vs  PERSIB Bandung,9,4,0,0
-PERSIK Kediri,PSM Makassar  vs  PERSIK Kediri,10,1,0,0
-PERSIS Solo,PSM Makassar  vs  PERSIS Solo,1,3,1,0.06203801
-PERSIS Solo,PERSIS Solo  vs  PSIS Semarang,2,9,3,0.308920442
-PERSIS Solo,PERSIJA Jakarta  vs  PERSIS Solo,3,5,3,0.486155241
-PERSIS Solo,PERSIS Solo  vs  Madura United FC,4,4,1,0.072737976
-PERSIS Solo,PERSEBAYA Surabaya  vs  PERSIS Solo,5,3,2,0.148102043
-PERSIS Solo,PERSIS Solo  vs  PERSIK Kediri,6,13,3,0.143918415
-PERSIS Solo,Semen Padang FC  vs  PERSIS Solo,7,5,3,0.226369832
-PERSIS Solo,PERSIS Solo  vs  Borneo FC Samarinda,8,4,1,0.069409951
-PERSIS Solo,Bali United FC  vs  PERSIS Solo,9,10,3,0.211401141
-PERSIS Solo,PERSIS Solo  vs  PSS Sleman,10,8,1,0.165705892
-PERSITA Tangerang,PSIS Semarang  vs  PERSITA Tangerang,1,4,1,0.146452805
-PERSITA Tangerang,PERSITA Tangerang  vs  PERSIJA Jakarta,2,2,0,0
-PERSITA Tangerang,Madura United FC  vs  PERSITA Tangerang,3,2,1,0.038069457
-PERSITA Tangerang,PERSITA Tangerang  vs  PERSEBAYA Surabaya,4,6,3,0.108678393
-PERSITA Tangerang,PERSIK Kediri  vs  PERSITA Tangerang,5,8,1,0.07059528
-PERSITA Tangerang,PERSITA Tangerang  vs  Semen Padang FC,6,3,1,0.011180197
-PERSITA Tangerang,Borneo FC Samarinda  vs  PERSITA Tangerang,7,3,1,0.010937335
-PERSITA Tangerang,PERSITA Tangerang  vs  Bali United FC,8,2,0,0
-PERSITA Tangerang,PSS Sleman  vs  PERSITA Tangerang,9,1,1,0.102700128
-PERSITA Tangerang,PERSITA Tangerang  vs  Malut United FC,10,4,1,0.038640103
-PS Barito Putera,PERSIJA Jakarta  vs  PS Barito Putera,1,3,3,0.141581709
-PS Barito Putera,PS Barito Putera  vs  Madura United FC,2,1,0,0
-PS Barito Putera,PERSEBAYA Surabaya  vs  PS Barito Putera,3,3,0,0
-PS Barito Putera,PS Barito Putera  vs  PERSIK Kediri,4,3,1,0.06622818
-PS Barito Putera,Semen Padang FC  vs  PS Barito Putera,5,4,0,0
-PS Barito Putera,PS Barito Putera  vs  Borneo FC Samarinda,6,7,2,0.205060324
-PS Barito Putera,Bali United FC  vs  PS Barito Putera,7,5,3,0.088738179
-PS Barito Putera,PS Barito Putera  vs  PSS Sleman,8,8,0,0
-PS Barito Putera,Malut United FC  vs  PS Barito Putera,9,5,2,0.139405537
-PS Barito Putera,PS Barito Putera  vs  AREMA FC,10,5,1,0.082601892
-PSBS Biak,PERSIB Bandung  vs  PSBS Biak,1,4,0,0
-PSBS Biak,PSBS Biak  vs  PSM Makassar,2,5,1,0.058024731
-PSBS Biak,PSIS Semarang  vs  PSBS Biak,3,6,2,0.046424597
-PSBS Biak,PSBS Biak  vs  PERSIJA Jakarta,4,6,2,0.105183672
-PSBS Biak,PSBS Biak  vs  Madura United FC,5,5,0,0
-PSBS Biak,PSBS Biak  vs  PERSEBAYA Surabaya,6,5,0,0
-PSBS Biak,PERSIK Kediri  vs  PSBS Biak,7,2,0,0
-PSBS Biak,PSBS Biak  vs  Semen Padang FC,8,5,3,1.176764846
-PSBS Biak,Borneo FC Samarinda  vs  PSBS Biak,9,8,1,0.045410536
-PSBS Biak,PSBS Biak  vs  Bali United FC,10,6,2,0.047408747
-PSIS Semarang,PSIS Semarang  vs  PERSITA Tangerang,1,12,1,0.457138117
-PSIS Semarang,PERSIS Solo  vs  PSIS Semarang,2,2,2,0.090565114
-PSIS Semarang,PSIS Semarang  vs  PSBS Biak,3,3,1,0.010740649
-PSIS Semarang,Dewa United FC  vs  PSIS Semarang,4,6,1,0.027347541
-PSIS Semarang,PERSIB Bandung  vs  PSIS Semarang,5,1,0,0
-PSIS Semarang,PSM Makassar  vs  PSIS Semarang,6,4,0,0
-PSIS Semarang,PSIS Semarang  vs  AREMA FC,7,1,1,0.002125933
-PSIS Semarang,PSIS Semarang  vs  PERSIJA Jakarta,8,2,0,0
-PSIS Semarang,Madura United FC  vs  PSIS Semarang,9,2,0,0
-PSIS Semarang,PSIS Semarang  vs  PERSEBAYA Surabaya,10,5,0,0
-PSM Makassar,PSM Makassar  vs  PERSIS Solo,1,10,2,0.076206186
-PSM Makassar,PSBS Biak  vs  PSM Makassar,2,3,1,0.044654675
-PSM Makassar,PSM Makassar  vs  Dewa United FC,3,3,3,0.188402097
-PSM Makassar,PSM Makassar  vs  PERSIB Bandung,4,4,0,0
-PSM Makassar,PSM Makassar  vs  AREMA FC,5,3,0,0
-PSM Makassar,PSM Makassar  vs  PSIS Semarang,6,10,1,0.003662587
-PSM Makassar,PERSIJA Jakarta  vs  PSM Makassar,7,4,2,0.166196977
-PSM Makassar,PSM Makassar  vs  Madura United FC,8,2,1,0.077048759
-PSM Makassar,PERSEBAYA Surabaya  vs  PSM Makassar,9,4,2,0.139035974
-PSM Makassar,PSM Makassar  vs  PERSIK Kediri,10,7,1,0.013055949
-PSS Sleman,PERSEBAYA Surabaya  vs  PSS Sleman,1,2,1,0.085208633
-PSS Sleman,PSS Sleman  vs  PERSIK Kediri,2,5,1,0.055360574
-PSS Sleman,Semen Padang FC  vs  PSS Sleman,3,5,2,0.1713677
-PSS Sleman,PSS Sleman  vs  Borneo FC Samarinda,4,1,0,0
-PSS Sleman,Bali United FC  vs  PSS Sleman,5,4,1,0.229004207
-PSS Sleman,PSS Sleman  vs  AREMA FC,6,3,0,0
-PSS Sleman,PSS Sleman  vs  Malut United FC,7,5,2,0.179146401
-PSS Sleman,PS Barito Putera  vs  PSS Sleman,8,1,0,0
-PSS Sleman,PSS Sleman  vs  PERSITA Tangerang,9,12,4,0.253217043
-PSS Sleman,PERSIS Solo  vs  PSS Sleman,10,3,1,0.053923224
-Semen Padang FC,Semen Padang FC  vs  Borneo FC Samarinda,1,2,0,0
-Semen Padang FC,Bali United FC  vs  Semen Padang FC,2,0,0,0
-Semen Padang FC,Semen Padang FC  vs  PSS Sleman,3,3,0,0
-Semen Padang FC,Malut United FC  vs  Semen Padang FC,4,3,1,0.065143765
-Semen Padang FC,Semen Padang FC  vs  PS Barito Putera,5,2,0,0
-Semen Padang FC,PERSITA Tangerang  vs  Semen Padang FC,6,6,1,0.072803981
-Semen Padang FC,Semen Padang FC  vs  PERSIS Solo,7,8,3,0.073641326
-Semen Padang FC,PSBS Biak  vs  Semen Padang FC,8,3,0,0
-Semen Padang FC,Semen Padang FC  vs  Dewa United FC,9,3,1,0.075936557
-Semen Padang FC,PERSIB Bandung  vs  Semen Padang FC,10,1,1,0.083748955
+team,game,game_week,total_ck_for,xg,shots_from_ck
+AREMA FC,AREMA FC - Dewa United FC,1,10,0.57208786068218,5
+AREMA FC,AREMA FC - Borneo FC Samarinda,2,5,0.316733603288856,3
+AREMA FC,PERSIB Bandung - AREMA FC,3,5,0.0738511385010874,2
+AREMA FC,Bali United FC - AREMA FC,4,3,0,0
+AREMA FC,PSM Makassar - AREMA FC,5,0,0,0
+AREMA FC,PSS Sleman - AREMA FC,6,9,0.182289392100473,3
+AREMA FC,PSIS Semarang - AREMA FC,7,4,0,0
+AREMA FC,AREMA FC - Malut United FC,8,5,0,0
+AREMA FC,AREMA FC - PERSIJA Jakarta,9,4,0,0
+AREMA FC,PS Barito Putera - AREMA FC,10,8,0.42123312445022,3
+AREMA FC,Madura United FC - AREMA FC,11,3,0,0
+AREMA FC,AREMA FC - PERSITA Tangerang,12,8,0.188280068960241,2
+AREMA FC,PERSEBAYA Surabaya - AREMA FC,13,5,0.150217404999355,1
+AREMA FC,AREMA FC - PERSIS Solo,14,1,0,0
+AREMA FC,PERSIK Kediri - AREMA FC,15,3,0.0132568641799334,1
+AREMA FC,AREMA FC - PSBS Biak,16,4,0,0
+AREMA FC,Semen Padang FC - AREMA FC,17,1,0,0
+Bali United FC,PERSIK Kediri - Bali United FC,1,5,0.157472109512492,2
+Bali United FC,Bali United FC - Semen Padang FC,2,6,0,0
+Bali United FC,Borneo FC Samarinda - Bali United FC,3,4,0.0594653171311025,2
+Bali United FC,Bali United FC - AREMA FC,4,5,0.0709985793184401,1
+Bali United FC,Bali United FC - PSS Sleman,5,14,0.216437621378863,6
+Bali United FC,Malut United FC - Bali United FC,6,3,0.084777284125642,1
+Bali United FC,Bali United FC - PS Barito Putera,7,7,0.543601044662934,5
+Bali United FC,PERSITA Tangerang - Bali United FC,8,6,0.00534472029187183,1
+Bali United FC,Bali United FC - PERSIS Solo,9,8,0.101321857314813,2
+Bali United FC,PSBS Biak - Bali United FC,10,4,0.0150682325313346,1
+Bali United FC,Dewa United FC - Bali United FC,11,3,0.0363255190682734,1
+Bali United FC,Bali United FC - PSM Makassar,13,7,0.0182320401937446,1
+Bali United FC,PSIS Semarang - Bali United FC,14,9,0,0
+Bali United FC,Bali United FC - PERSIJA Jakarta,15,7,0.0750351416147536,2
+Bali United FC,Madura United FC - Bali United FC,16,5,0.131516996471534,1
+Bali United FC,Bali United FC - PERSEBAYA Surabaya,17,7,0.0448449786272269,1
+Borneo FC Samarinda,Semen Padang FC - Borneo FC Samarinda,1,6,0,0
+Borneo FC Samarinda,AREMA FC - Borneo FC Samarinda,2,4,0.348053790564251,1
+Borneo FC Samarinda,Borneo FC Samarinda - Bali United FC,3,5,0.250862270248745,2
+Borneo FC Samarinda,PSS Sleman - Borneo FC Samarinda,4,4,0,0
+Borneo FC Samarinda,Borneo FC Samarinda - Malut United FC,5,6,0.058469797094678,1
+Borneo FC Samarinda,PS Barito Putera - Borneo FC Samarinda,6,2,0,0
+Borneo FC Samarinda,Borneo FC Samarinda - PERSITA Tangerang,7,10,0.937642916681856,5
+Borneo FC Samarinda,PERSIS Solo - Borneo FC Samarinda,8,8,0.520751255291027,4
+Borneo FC Samarinda,Borneo FC Samarinda - PSBS Biak,9,4,0,0
+Borneo FC Samarinda,Borneo FC Samarinda - Dewa United FC,10,5,0.107854847068407,2
+Borneo FC Samarinda,PERSIB Bandung - Borneo FC Samarinda,11,9,0,0
+Borneo FC Samarinda,PSM Makassar - Borneo FC Samarinda,12,6,0.123629414034911,1
+Borneo FC Samarinda,Borneo FC Samarinda - PSIS Semarang,13,12,0.109267045592567,2
+Borneo FC Samarinda,PERSIJA Jakarta - Borneo FC Samarinda,14,7,0,0
+Borneo FC Samarinda,Borneo FC Samarinda - Madura United FC,15,1,0,0
+Borneo FC Samarinda,PERSEBAYA Surabaya - Borneo FC Samarinda,16,4,0.159147602009193,2
+Borneo FC Samarinda,Borneo FC Samarinda - PERSIK Kediri,17,7,0.153844827973498,3
+Dewa United FC,AREMA FC - Dewa United FC,1,4,0,0
+Dewa United FC,Dewa United FC - PERSIB Bandung,2,6,0.0620380098070407,1
+Dewa United FC,PSM Makassar - Dewa United FC,3,8,0.113660159491471,4
+Dewa United FC,Dewa United FC - PSIS Semarang,4,5,0.00392115042727215,1
+Dewa United FC,PERSIJA Jakarta - Dewa United FC,5,5,0.0103248888171501,1
+Dewa United FC,Dewa United FC - Madura United FC,6,1,0,0
+Dewa United FC,PERSEBAYA Surabaya - Dewa United FC,7,1,0,0
+Dewa United FC,Dewa United FC - PERSIK Kediri,8,10,0,0
+Dewa United FC,Semen Padang FC - Dewa United FC,9,4,0,0
+Dewa United FC,Borneo FC Samarinda - Dewa United FC,10,3,0,0
+Dewa United FC,Dewa United FC - Bali United FC,11,6,0.175840670556121,2
+Dewa United FC,Dewa United FC - PSS Sleman,12,6,0.367254862663343,3
+Dewa United FC,Malut United FC - Dewa United FC,13,3,0,0
+Dewa United FC,Dewa United FC - PS Barito Putera,14,8,0.0195034299464895,1
+Dewa United FC,PERSITA Tangerang - Dewa United FC,15,8,0,0
+Dewa United FC,Dewa United FC - PERSIS Solo,16,4,0.115234341920362,1
+Dewa United FC,PSBS Biak - Dewa United FC,17,12,0.112638430987872,2
+Madura United FC,Madura United FC - Malut United FC,1,3,0,0
+Madura United FC,PS Barito Putera - Madura United FC,2,2,0,0
+Madura United FC,Madura United FC - PERSITA Tangerang,3,4,0,0
+Madura United FC,PERSIS Solo - Madura United FC,4,3,0,0
+Madura United FC,PSBS Biak - Madura United FC,5,4,0.613597794492848,3
+Madura United FC,Dewa United FC - Madura United FC,6,3,0.143308057388278,2
+Madura United FC,Madura United FC - PERSIB Bandung,7,8,0,0
+Madura United FC,PSM Makassar - Madura United FC,8,6,0.196986821651807,4
+Madura United FC,Madura United FC - PSIS Semarang,9,8,0.142187721281748,2
+Madura United FC,PERSIJA Jakarta - Madura United FC,10,6,0,0
+Madura United FC,Madura United FC - AREMA FC,11,5,0,0
+Madura United FC,Madura United FC - PERSEBAYA Surabaya,12,6,0.131375096279212,2
+Madura United FC,PERSIK Kediri - Madura United FC,13,1,0,0
+Madura United FC,Madura United FC - Semen Padang FC,14,5,0.0177239592202102,1
+Madura United FC,Borneo FC Samarinda - Madura United FC,15,5,0.0064545929496348,1
+Madura United FC,Madura United FC - Bali United FC,16,1,0,0
+Madura United FC,PSS Sleman - Madura United FC,17,3,0,0
+Malut United FC,Madura United FC - Malut United FC,1,5,0.0539232236979795,1
+Malut United FC,Malut United FC - PERSEBAYA Surabaya,2,6,0.0812308176242864,2
+Malut United FC,PERSIK Kediri - Malut United FC,3,2,0,0
+Malut United FC,Malut United FC - Semen Padang FC,4,3,0.027347540791883,1
+Malut United FC,Borneo FC Samarinda - Malut United FC,5,1,0,0
+Malut United FC,Malut United FC - Bali United FC,6,5,0.187685642149688,3
+Malut United FC,PSS Sleman - Malut United FC,7,5,0,0
+Malut United FC,AREMA FC - Malut United FC,8,5,0.0140274444338653,1
+Malut United FC,Malut United FC - PS Barito Putera,9,5,0.170117970029411,2
+Malut United FC,PERSITA Tangerang - Malut United FC,10,6,0.129775459556279,2
+Malut United FC,Malut United FC - PERSIS Solo,11,5,0.133431289966932,2
+Malut United FC,PSBS Biak - Malut United FC,12,3,0,0
+Malut United FC,Malut United FC - Dewa United FC,13,8,0.058469797094678,1
+Malut United FC,PERSIB Bandung - Malut United FC,14,8,0,0
+Malut United FC,Malut United FC - PSM Makassar,15,5,0.127980517436677,3
+Malut United FC,PSIS Semarang - Malut United FC,16,7,0.140169212236649,2
+Malut United FC,Malut United FC - PERSIJA Jakarta,17,10,0.0969194417590104,6
+PERSEBAYA Surabaya,PERSEBAYA Surabaya - PSS Sleman,1,6,0.0539232236979795,1
+PERSEBAYA Surabaya,Malut United FC - PERSEBAYA Surabaya,2,8,0.145973629236592,2
+PERSEBAYA Surabaya,PERSEBAYA Surabaya - PS Barito Putera,3,4,0,0
+PERSEBAYA Surabaya,PERSITA Tangerang - PERSEBAYA Surabaya,4,3,0,0
+PERSEBAYA Surabaya,PERSEBAYA Surabaya - PERSIS Solo,5,5,0.165844451062895,2
+PERSEBAYA Surabaya,PSBS Biak - PERSEBAYA Surabaya,6,5,0.101985489609223,1
+PERSEBAYA Surabaya,PERSEBAYA Surabaya - Dewa United FC,7,5,0.172491888002652,1
+PERSEBAYA Surabaya,PERSIB Bandung - PERSEBAYA Surabaya,8,3,0,0
+PERSEBAYA Surabaya,PERSEBAYA Surabaya - PSM Makassar,9,6,0.0907096704913835,2
+PERSEBAYA Surabaya,PSIS Semarang - PERSEBAYA Surabaya,10,5,0,0
+PERSEBAYA Surabaya,PERSEBAYA Surabaya - PERSIJA Jakarta,11,3,0.245454635361688,3
+PERSEBAYA Surabaya,Madura United FC - PERSEBAYA Surabaya,12,5,0.0291673539467112,1
+PERSEBAYA Surabaya,PERSEBAYA Surabaya - AREMA FC,13,1,0.0129663381014779,1
+PERSEBAYA Surabaya,PERSEBAYA Surabaya - PERSIK Kediri,14,6,0.12071465894757,3
+PERSEBAYA Surabaya,Semen Padang FC - PERSEBAYA Surabaya,15,4,0.0694099505179029,1
+PERSEBAYA Surabaya,PERSEBAYA Surabaya - Borneo FC Samarinda,16,2,0,0
+PERSEBAYA Surabaya,Bali United FC - PERSEBAYA Surabaya,17,11,0.255981428745642,2
+PERSIB Bandung,PERSIB Bandung - PSBS Biak,1,4,0.0694099505179029,1
+PERSIB Bandung,Dewa United FC - PERSIB Bandung,2,3,0.0355707178460168,1
+PERSIB Bandung,PERSIB Bandung - AREMA FC,3,5,0.0222070575311109,1
+PERSIB Bandung,PSM Makassar - PERSIB Bandung,4,3,0.227547216779188,1
+PERSIB Bandung,PERSIB Bandung - PSIS Semarang,5,4,0.293864787275491,2
+PERSIB Bandung,PERSIB Bandung - PERSIJA Jakarta,6,1,0,0
+PERSIB Bandung,Madura United FC - PERSIB Bandung,7,2,0.14645280483314,1
+PERSIB Bandung,PERSIB Bandung - PERSEBAYA Surabaya,8,2,0.150217404999355,1
+PERSIB Bandung,PERSIK Kediri - PERSIB Bandung,9,3,0,0
+PERSIB Bandung,PERSIB Bandung - Semen Padang FC,10,10,0.753433606643724,6
+PERSIB Bandung,PERSIB Bandung - Borneo FC Samarinda,11,4,0,0
+PERSIB Bandung,PSS Sleman - PERSIB Bandung,13,4,0.0743412730625432,1
+PERSIB Bandung,PERSIB Bandung - Malut United FC,14,9,0,0
+PERSIB Bandung,PS Barito Putera - PERSIB Bandung,15,5,0.303781312474584,2
+PERSIB Bandung,PERSIB Bandung - PERSITA Tangerang,16,15,0.153259261372868,3
+PERSIB Bandung,PERSIS Solo - PERSIB Bandung,17,7,0,0
+PERSIJA Jakarta,PERSIJA Jakarta - PS Barito Putera,1,4,0.246263786589073,3
+PERSIJA Jakarta,PERSITA Tangerang - PERSIJA Jakarta,2,8,0,0
+PERSIJA Jakarta,PERSIJA Jakarta - PERSIS Solo,3,3,0,0
+PERSIJA Jakarta,PSBS Biak - PERSIJA Jakarta,4,5,0.0186948970855311,1
+PERSIJA Jakarta,PERSIJA Jakarta - Dewa United FC,5,8,0.114269122637986,2
+PERSIJA Jakarta,PERSIB Bandung - PERSIJA Jakarta,6,4,0,0
+PERSIJA Jakarta,PERSIJA Jakarta - PSM Makassar,7,5,0.116790776506043,1
+PERSIJA Jakarta,PSIS Semarang - PERSIJA Jakarta,8,8,0.0927148878245866,2
+PERSIJA Jakarta,AREMA FC - PERSIJA Jakarta,9,6,0,0
+PERSIJA Jakarta,PERSIJA Jakarta - Madura United FC,10,4,0.254589238127184,3
+PERSIJA Jakarta,PERSEBAYA Surabaya - PERSIJA Jakarta,11,5,0.171614674282047,2
+PERSIJA Jakarta,PERSIJA Jakarta - PERSIK Kediri,12,6,0.190094338023206,2
+PERSIJA Jakarta,Semen Padang FC - PERSIJA Jakarta,13,4,0.0603796436482982,1
+PERSIJA Jakarta,PERSIJA Jakarta - Borneo FC Samarinda,14,1,0.225553015851822,1
+PERSIJA Jakarta,Bali United FC - PERSIJA Jakarta,15,8,0.104535603481684,2
+PERSIJA Jakarta,PERSIJA Jakarta - PSS Sleman,16,6,0.105595035543061,1
+PERSIJA Jakarta,Malut United FC - PERSIJA Jakarta,17,4,0.0223389408879027,3
+PERSIK Kediri,PERSIK Kediri - Bali United FC,1,0,0,0
+PERSIK Kediri,PSS Sleman - PERSIK Kediri,2,2,0.315677192643488,1
+PERSIK Kediri,PERSIK Kediri - Malut United FC,3,4,0.529830772840425,4
+PERSIK Kediri,PS Barito Putera - PERSIK Kediri,4,3,0,0
+PERSIK Kediri,PERSIK Kediri - PERSITA Tangerang,5,1,0.295766248843675,1
+PERSIK Kediri,PERSIS Solo - PERSIK Kediri,6,2,0,0
+PERSIK Kediri,PERSIK Kediri - PSBS Biak,7,4,0.0747964554624404,2
+PERSIK Kediri,Dewa United FC - PERSIK Kediri,8,2,0,0
+PERSIK Kediri,PERSIK Kediri - PERSIB Bandung,9,4,0,0
+PERSIK Kediri,PSM Makassar - PERSIK Kediri,10,1,0,0
+PERSIK Kediri,PERSIK Kediri - PSIS Semarang,11,6,0.128143042767034,3
+PERSIK Kediri,PERSIJA Jakarta - PERSIK Kediri,12,2,0.0311370900039438,2
+PERSIK Kediri,PERSIK Kediri - Madura United FC,13,5,0.645323277097819,2
+PERSIK Kediri,PERSEBAYA Surabaya - PERSIK Kediri,14,9,0.536590028939516,2
+PERSIK Kediri,PERSIK Kediri - AREMA FC,15,7,0.265404681893225,2
+PERSIK Kediri,PERSIK Kediri - Semen Padang FC,16,9,0.212441488908814,2
+PERSIK Kediri,Borneo FC Samarinda - PERSIK Kediri,17,3,0.104672639047173,1
+PERSIS Solo,PSM Makassar - PERSIS Solo,1,3,0.0620380098070407,1
+PERSIS Solo,PERSIS Solo - PSIS Semarang,2,9,0.308920441803865,3
+PERSIS Solo,PERSIJA Jakarta - PERSIS Solo,3,5,0.486155240529187,3
+PERSIS Solo,PERSIS Solo - Madura United FC,4,4,0.0727379760094205,1
+PERSIS Solo,PERSEBAYA Surabaya - PERSIS Solo,5,3,0.148102042964375,2
+PERSIS Solo,PERSIS Solo - PERSIK Kediri,6,13,0.143918415180815,3
+PERSIS Solo,Semen Padang FC - PERSIS Solo,7,5,0.226369831784872,3
+PERSIS Solo,PERSIS Solo - Borneo FC Samarinda,8,4,0.0694099505179029,1
+PERSIS Solo,Bali United FC - PERSIS Solo,9,10,0.211401141255761,3
+PERSIS Solo,PERSIS Solo - PSS Sleman,10,8,0.165705892001279,1
+PERSIS Solo,Malut United FC - PERSIS Solo,11,2,0.0109201827873577,1
+PERSIS Solo,PERSIS Solo - PS Barito Putera,12,7,0,0
+PERSIS Solo,PERSITA Tangerang - PERSIS Solo,13,6,0.0516526693956727,1
+PERSIS Solo,AREMA FC - PERSIS Solo,14,4,0.127232856213835,1
+PERSIS Solo,PERSIS Solo - PSBS Biak,15,3,0,0
+PERSIS Solo,Dewa United FC - PERSIS Solo,16,3,0.0923339316436115,1
+PERSIS Solo,PERSIS Solo - PERSIB Bandung,17,8,0.116790776506043,1
+PERSITA Tangerang,PSIS Semarang - PERSITA Tangerang,1,4,0.14645280483314,1
+PERSITA Tangerang,PERSITA Tangerang - PERSIJA Jakarta,2,2,0,0
+PERSITA Tangerang,Madura United FC - PERSITA Tangerang,3,2,0.0380694567767662,1
+PERSITA Tangerang,PERSITA Tangerang - PERSEBAYA Surabaya,4,6,0.108678392758587,3
+PERSITA Tangerang,PERSIK Kediri - PERSITA Tangerang,5,8,0.0705952796102545,1
+PERSITA Tangerang,PERSITA Tangerang - Semen Padang FC,6,3,0.0111801968365823,1
+PERSITA Tangerang,Borneo FC Samarinda - PERSITA Tangerang,7,3,0.0109373348101067,1
+PERSITA Tangerang,PERSITA Tangerang - Bali United FC,8,2,0,0
+PERSITA Tangerang,PSS Sleman - PERSITA Tangerang,9,1,0.102700128300979,1
+PERSITA Tangerang,PERSITA Tangerang - Malut United FC,10,4,0.0386401028046839,1
+PERSITA Tangerang,PS Barito Putera - PERSITA Tangerang,11,2,0,0
+PERSITA Tangerang,AREMA FC - PERSITA Tangerang,12,5,0.104448802630263,4
+PERSITA Tangerang,PERSITA Tangerang - PERSIS Solo,13,2,0,0
+PERSITA Tangerang,PSBS Biak - PERSITA Tangerang,14,1,0,0
+PERSITA Tangerang,PERSITA Tangerang - Dewa United FC,15,4,0.0547056847556873,2
+PERSITA Tangerang,PERSIB Bandung - PERSITA Tangerang,16,3,0,0
+PERSITA Tangerang,PERSITA Tangerang - PSM Makassar,17,1,0,0
+PS Barito Putera,PERSIJA Jakarta - PS Barito Putera,1,3,0.141581708758468,3
+PS Barito Putera,PS Barito Putera - Madura United FC,2,1,0,0
+PS Barito Putera,PERSEBAYA Surabaya - PS Barito Putera,3,3,0,0
+PS Barito Putera,PS Barito Putera - PERSIK Kediri,4,3,0.0662281797406088,1
+PS Barito Putera,Semen Padang FC - PS Barito Putera,5,4,0,0
+PS Barito Putera,PS Barito Putera - Borneo FC Samarinda,6,7,0.205060323757902,2
+PS Barito Putera,Bali United FC - PS Barito Putera,7,5,0.0887381794609924,3
+PS Barito Putera,PS Barito Putera - PSS Sleman,8,8,0,0
+PS Barito Putera,Malut United FC - PS Barito Putera,9,5,0.139405536641749,2
+PS Barito Putera,PS Barito Putera - AREMA FC,10,5,0.0826018916713609,1
+PS Barito Putera,PS Barito Putera - PERSITA Tangerang,11,13,0,0
+PS Barito Putera,PERSIS Solo - PS Barito Putera,12,1,0,0
+PS Barito Putera,PS Barito Putera - PSBS Biak,13,3,0.135508443924364,2
+PS Barito Putera,Dewa United FC - PS Barito Putera,14,8,0.524092423471408,3
+PS Barito Putera,PS Barito Putera - PERSIB Bandung,15,3,0.0259055784329487,2
+PS Barito Putera,PSM Makassar - PS Barito Putera,16,2,0,0
+PS Barito Putera,PS Barito Putera - PSIS Semarang,17,7,0.113265880303868,1
+PSBS Biak,PERSIB Bandung - PSBS Biak,1,4,0,0
+PSBS Biak,PSBS Biak - PSM Makassar,2,5,0.0580247314772129,1
+PSBS Biak,PSIS Semarang - PSBS Biak,3,6,0.0464245969070464,2
+PSBS Biak,PSBS Biak - PERSIJA Jakarta,4,6,0.105183672102434,2
+PSBS Biak,PSBS Biak - Madura United FC,5,5,0,0
+PSBS Biak,PSBS Biak - PERSEBAYA Surabaya,6,5,0,0
+PSBS Biak,PERSIK Kediri - PSBS Biak,7,2,0,0
+PSBS Biak,PSBS Biak - Semen Padang FC,8,5,1.1767648460669,3
+PSBS Biak,Borneo FC Samarinda - PSBS Biak,9,8,0.0454105358779897,1
+PSBS Biak,PSBS Biak - Bali United FC,10,6,0.0474087472020471,2
+PSBS Biak,PSS Sleman - PSBS Biak,11,5,0.0331750060359168,2
+PSBS Biak,PSBS Biak - Malut United FC,12,8,0.141594546745611,2
+PSBS Biak,PS Barito Putera - PSBS Biak,13,2,0.079451912000077,1
+PSBS Biak,PSBS Biak - PERSITA Tangerang,14,6,0,0
+PSBS Biak,PERSIS Solo - PSBS Biak,15,6,0.133925390785013,2
+PSBS Biak,AREMA FC - PSBS Biak,16,5,0,0
+PSBS Biak,PSBS Biak - Dewa United FC,17,1,0,0
+PSIS Semarang,PSIS Semarang - PERSITA Tangerang,1,12,0.457138116939439,1
+PSIS Semarang,PERSIS Solo - PSIS Semarang,2,2,0.0905651144064723,2
+PSIS Semarang,PSIS Semarang - PSBS Biak,3,3,0.0107406490126589,1
+PSIS Semarang,Dewa United FC - PSIS Semarang,4,6,0.027347540791883,1
+PSIS Semarang,PERSIB Bandung - PSIS Semarang,5,1,0,0
+PSIS Semarang,PSM Makassar - PSIS Semarang,6,4,0,0
+PSIS Semarang,PSIS Semarang - AREMA FC,7,1,0.00212593311192832,1
+PSIS Semarang,PSIS Semarang - PERSIJA Jakarta,8,2,0,0
+PSIS Semarang,Madura United FC - PSIS Semarang,9,2,0,0
+PSIS Semarang,PSIS Semarang - PERSEBAYA Surabaya,10,5,0,0
+PSIS Semarang,PERSIK Kediri - PSIS Semarang,11,1,0,0
+PSIS Semarang,PSIS Semarang - Semen Padang FC,12,4,0,0
+PSIS Semarang,Borneo FC Samarinda - PSIS Semarang,13,7,0,0
+PSIS Semarang,PSIS Semarang - Bali United FC,14,12,0.13086104600748,3
+PSIS Semarang,PSS Sleman - PSIS Semarang,15,6,0,0
+PSIS Semarang,PSIS Semarang - Malut United FC,16,5,0,0
+PSIS Semarang,PS Barito Putera - PSIS Semarang,17,3,0,0
+PSM Makassar,PSM Makassar - PERSIS Solo,1,10,0.0762061857941462,2
+PSM Makassar,PSBS Biak - PSM Makassar,2,3,0.0446546747629033,1
+PSM Makassar,PSM Makassar - Dewa United FC,3,3,0.188402096900388,3
+PSM Makassar,PSM Makassar - PERSIB Bandung,4,4,0,0
+PSM Makassar,PSM Makassar - AREMA FC,5,3,0,0
+PSM Makassar,PSM Makassar - PSIS Semarang,6,10,0.00366258724944513,1
+PSM Makassar,PERSIJA Jakarta - PSM Makassar,7,4,0.166196976843721,2
+PSM Makassar,PSM Makassar - Madura United FC,8,2,0.0770487590240034,1
+PSM Makassar,PERSEBAYA Surabaya - PSM Makassar,9,4,0.13903597366596,2
+PSM Makassar,PSM Makassar - PERSIK Kediri,10,7,0.0130559494718231,1
+PSM Makassar,Semen Padang FC - PSM Makassar,11,10,0.188469307102708,2
+PSM Makassar,PSM Makassar - Borneo FC Samarinda,12,5,0.198255930934322,2
+PSM Makassar,Bali United FC - PSM Makassar,13,5,0.335741059607959,2
+PSM Makassar,PSM Makassar - PSS Sleman,14,5,0.131516996471534,1
+PSM Makassar,Malut United FC - PSM Makassar,15,4,0,0
+PSM Makassar,PSM Makassar - PS Barito Putera,16,3,2.56902875315692,6
+PSM Makassar,PERSITA Tangerang - PSM Makassar,17,12,0.0706096470741349,1
+PSS Sleman,PERSEBAYA Surabaya - PSS Sleman,1,2,0.0852086326949794,1
+PSS Sleman,PSS Sleman - PERSIK Kediri,2,5,0.0553605737032683,1
+PSS Sleman,Semen Padang FC - PSS Sleman,3,5,0.171367700493991,2
+PSS Sleman,PSS Sleman - Borneo FC Samarinda,4,1,0,0
+PSS Sleman,Bali United FC - PSS Sleman,5,4,0.229004207190288,1
+PSS Sleman,PSS Sleman - AREMA FC,6,3,0,0
+PSS Sleman,PSS Sleman - Malut United FC,7,5,0.17914640143734,2
+PSS Sleman,PS Barito Putera - PSS Sleman,8,1,0,0
+PSS Sleman,PSS Sleman - PERSITA Tangerang,9,12,0.253217043040993,4
+PSS Sleman,PERSIS Solo - PSS Sleman,10,3,0.0539232236979795,1
+PSS Sleman,PSS Sleman - PSBS Biak,11,6,0,0
+PSS Sleman,Dewa United FC - PSS Sleman,12,10,0,0
+PSS Sleman,PSS Sleman - PERSIB Bandung,13,6,0,0
+PSS Sleman,PSM Makassar - PSS Sleman,14,13,0.379043877015054,2
+PSS Sleman,PSS Sleman - PSIS Semarang,15,8,0.425170744160125,5
+PSS Sleman,PERSIJA Jakarta - PSS Sleman,16,4,0.0384762619576893,1
+PSS Sleman,PSS Sleman - Madura United FC,17,1,0.0253008656462775,1
+Semen Padang FC,Semen Padang FC - Borneo FC Samarinda,1,2,0,0
+Semen Padang FC,Bali United FC - Semen Padang FC,2,0,0,0
+Semen Padang FC,Semen Padang FC - PSS Sleman,3,3,0,0
+Semen Padang FC,Malut United FC - Semen Padang FC,4,3,0.0651437651556744,1
+Semen Padang FC,Semen Padang FC - PS Barito Putera,5,2,0,0
+Semen Padang FC,PERSITA Tangerang - Semen Padang FC,6,6,0.072803981364803,1
+Semen Padang FC,Semen Padang FC - PERSIS Solo,7,8,0.0736413260445598,3
+Semen Padang FC,PSBS Biak - Semen Padang FC,8,3,0,0
+Semen Padang FC,Semen Padang FC - Dewa United FC,9,3,0.0759365567413083,1
+Semen Padang FC,PERSIB Bandung - Semen Padang FC,10,1,0.0837489550363815,1
+Semen Padang FC,Semen Padang FC - PSM Makassar,11,2,0,0
+Semen Padang FC,PSIS Semarang - Semen Padang FC,12,6,0.0476627281540184,2
+Semen Padang FC,Semen Padang FC - PERSIJA Jakarta,13,6,0.239385285237621,2
+Semen Padang FC,Madura United FC - Semen Padang FC,14,4,0.0834560908234601,1
+Semen Padang FC,Semen Padang FC - PERSEBAYA Surabaya,15,7,0,0
+Semen Padang FC,PERSIK Kediri - Semen Padang FC,16,2,0.0454105358779897,1
+Semen Padang FC,Semen Padang FC - AREMA FC,17,9,0.14726145168001,2
